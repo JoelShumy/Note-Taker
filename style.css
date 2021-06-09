@@ -45,7 +45,7 @@ form {
     margin-left: 20px;
 }
 
-#add_note {
+#submit_note {
     background-color: #00AA00;
     color: white;
     margin-top: 30px;
@@ -61,4 +61,5 @@ form {
     width: 90%;
     height: auto;
     padding: 25px;
+    margin-top: 35px;
 }
