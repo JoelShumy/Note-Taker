@@ -1,0 +1,64 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+
+h2 {
+ color: #00AA00;
+ font-size: 3rem;
+ margin-top: 30px;
+}
+
+p {
+    font-size: 2rem;
+}
+
+form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text_add {
+    min-width: 90%;
+    display: flex;
+    margin-top: 20px;
+}
+
+#userText {
+    min-width: 90%;
+    height: 40px;
+    margin-left: 20px;
+}
+
+#add_note {
+    background-color: #00AA00;
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 7px;
+
+}
+
+#note_container {
+    border: red solid 1px;
+    width: 90%;
+    height: auto;
+    padding: 25px;
+}
