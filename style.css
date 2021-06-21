@@ -8,11 +8,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vh;
 }
 
 h1 {
     font-size: 5rem;
+    margin-top: 10vh;
 }
 
 
@@ -70,10 +70,43 @@ form {
     width: 45%;
     border: solid 1px black;
     margin: 3% 2%;
-    padding: 10px;
+    padding: 15px 10px 20px 10px;
+    max-height: 100px;
 }
 
 .noteText {
-    margin: 3% 0%;
+    margin: 10px 0%;
     font-size: 1rem;
+    max-width: 90%;
+    max-height: 40px;
+    
 }
+
+.invisible {
+    display: none;
+}
+
+#background_note {
+    opacity: 0.6;
+    background-color: black;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+
+}
+
+.center_note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.note_zoom {
+    max-height: 300px;
+    min-height: 150px;
+    min-width: 50%;
+    background-color: white;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+

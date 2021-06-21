@@ -9,19 +9,28 @@
 </head>
 <body>
 
-    <h1>Note Taker</h1>
-    <h2>Add A New Note:</h2>
-    <form>
-        <div class="text_add">
-            <p>Note :</p>
-            <input type="text" id="userText" maxlength="600" minlength="1" required>
-        </div>
-        <button type="submit" id="submit_note">Add Note</button>
-    </form>
+    
 
-    <div id="note_container">
-        <div id="note_container__noText" class="delete">No notes added yet ! </div>
-    </div>
+        <h1>Note Taker</h1>
+        <h2>Add A New Note:</h2>
+        <form>
+            <div class="text_add">
+                <p>Note :</p>
+                <input type="text" id="userText" maxlength="600" minlength="1" required>
+            </div>
+            <button type="submit" id="submit_note">Add Note</button>
+        </form>
+
+        <div id="note_container">
+            <div id="note_container__noText" class="delete">No notes added yet ! </div>
+        </div>
+
+        <div id="background_note"  class="invisible">
+            <div id="zoom_note" class="note_zoom"></div>
+        </div>
+
+    
+       
 
     <script src="script.js"></script>
     
