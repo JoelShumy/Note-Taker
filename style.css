@@ -87,7 +87,7 @@ form {
 }
 
 #background_note {
-    opacity: 0.6;
+    opacity: 0.9;
     background-color: black;
     min-width: 100vw;
     min-height: 100vh;
@@ -104,9 +104,14 @@ form {
 .note_zoom {
     max-height: 300px;
     min-height: 150px;
-    min-width: 50%;
+    width: 50vw;
     background-color: white;
-    overflow: scroll;
-    overflow-x: hidden;
 }
+
+.note_zoom p {
+    border: solid 1px green;
+    height: auto;
+    width: 100%;
+}
+
 

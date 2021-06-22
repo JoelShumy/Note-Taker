@@ -5,6 +5,8 @@ const textNoContent = document.getElementById('note_container__noText')
 const backgroundFocusNote = document.getElementById('background_note')
 const zoomNote = document.getElementById('zoom_note')
 
+
+// Fonction pour ajouter une note
 function addNote(e) {
 
     const userText = note.value;
@@ -26,18 +28,31 @@ function addNote(e) {
     } else {
         createTextBox ();
     }
-
     e.preventDefault();
 }
 
+// fonction pour activer le focus et lire la note dans son intégralité
 function focusNote(element){
-    const textContainer = element.target;
-    thisText = textContainer.closest("p").value;
+    const textContainer = element.previousElementSibling.innerText;
     backgroundFocusNote.classList.remove('invisible');
     backgroundFocusNote.classList.add('center_note');
-    zoomNote.innerHTML = '<p>' + thisText + '</p>';
-    alert(thisText);
+    zoomNote.classList.add('center_note');
+    zoomNote.innerHTML = '<p>' + textContainer + '</p>';
 }
 
+
+
+// fonction pour enlever  le focus et revenir à l'écran normal
+function focusNoteOff() {
+    if (backgroundFocusNote.classList.contains('invisible')) {
+        return
+    } else {
+    backgroundFocusNote.classList.add('invisible');
+    backgroundFocusNote.classList.remove('center_note');
+    zoomNote.classList.remove('center_note');
+    }
+}
+
+backgroundFocusNote.addEventListener('click', focusNoteOff)
 buttonAdd.addEventListener('click', addNote)
 
