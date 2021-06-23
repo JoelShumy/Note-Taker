@@ -12,7 +12,7 @@ function addNote(e) {
     const userText = note.value;
     const newNote = document.createElement('div');
     newNote.classList.add('note')
-    newNote.innerHTML = '<h3>Note (index)</h3> <p class="noteText">' + userText + '</p> <button onclick="focusNote(this)" class="buttonNote">view details</button>';
+    newNote.innerHTML = '<p class="noteText">' + userText + '</p> <button onclick="focusNote(this)" class="buttonNote">view details</button>';
 
     const enfant = noteContainer.children;
 
@@ -36,7 +36,7 @@ function focusNote(element){
     const textContainer = element.previousElementSibling.innerText;
     backgroundFocusNote.classList.remove('invisible');
     backgroundFocusNote.classList.add('center_note');
-    zoomNote.classList.add('center_note');
+    noteContainer.style.display = 'none';
     zoomNote.innerHTML = '<p>' + textContainer + '</p>';
 }
 
@@ -49,7 +49,7 @@ function focusNoteOff() {
     } else {
     backgroundFocusNote.classList.add('invisible');
     backgroundFocusNote.classList.remove('center_note');
-    zoomNote.classList.remove('center_note');
+    noteContainer.style.display = 'flex';
     }
 }
 
